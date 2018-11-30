@@ -1,11 +1,15 @@
-@import "scss/carousel.scss";
+@import 'bootstrap/bootstrap.scss';
+@import 'carousel/carousel.scss';
+@import 'animate.scss';
+
+@import 'application/variables';
+
 main{
     width:1200px;
     margin:0 auto;
-
-} 
-.img_nav img{
-   width:80%;
+}
+.img_nav {
+  img { width:80%; }
 }
 .barre_nav{
     width:1200px;
@@ -27,25 +31,25 @@ main{
     width:100%;
     height:200px;
     background-color:grey;
-    
-}
-.nav {
-    margin-right:-3%;
-}
-.nav-item {
-    align-items: center;
-    margin:auto 0;
 }
 
-.nav-link:hover{
-    color:red;
+.nav {
+    margin-right:-3%;
+
+    &-item {
+        align-items: center;
+        margin:auto 0;
+    }
+
+    &-link {
+        font-size: 18px;
+        color:white;
+        padding:.5rem 2.5rem;
+
+        &:hover { color:red; }
+    }
 }
-.nav-link {
-    font-size: 18px;
-    color:white;
-    /* font-weight:bold; */
-    padding:.5rem 2.5rem;
-}
+
 .ss_article {
     width:50%
 }
@@ -54,14 +58,13 @@ main{
     display:flex;
     flex-wrap: wrap;
     margin: 5% 0;
-}
-.article h1 {
-    color:red;
+
+    h1 { color:red; }
 }
 
 
 #carouselExampleIndicators{
- margin-top:10%;
+    margin-top:10%;
 }
 
 /* Test du slider codePen */
@@ -74,9 +77,10 @@ main{
 }
 .img_article_slider{
     width:20%;
-}
-.img_article_slider img{
-    width:100%;
+
+    img {
+      width:100%;
+    }
 }
 .text_article_slider{
     width:30%;
@@ -84,31 +88,39 @@ main{
 
 
 /* FOOTER */
-
-.ml-1 img{
-	
-	padding-top : 1%; 
-	padding-bottom: 3%;
-	margin-left : 4%;
+.ml-1 {
+    img {
+        padding-top : 1%;
+        padding-bottom: 3%;
+        margin-left : 4%;
+    }
 }
 .contenu{
-      height: 1200px;
-      
+    height: 1200px;
 }
 .footer_kercode {
     width:1200px;
-    background-color: rgb(20,20,20);
+    background-color: $dark-1;
     margin-bottom:1%;
 }
 .fond_footer {
     padding:15px 0px;
     display:flex;
     width:100%;
-    background-color: rgb(20,20,20);
+    background-color: $dark-1;
     min-height:160px;
-  
 }
 .mentions_legale{
     font-size:1rem;
-    margin-top:10px; 
+    margin-top:10px;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.active {
+  background-color: white;
+  color: $dark-1;
+  border-radius: 5px;
 }
